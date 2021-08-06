@@ -10,6 +10,10 @@ class PostsController < ApplicationController
   def show
   end
 
+  def findGet
+    render :find
+  end
+
   def find
     puts "DEBUG"
     if @post = Post.find_by(title: params[:title])

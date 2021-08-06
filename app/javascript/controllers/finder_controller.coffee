@@ -10,8 +10,12 @@ export default class extends Controller
     console.log "Finder connecting"
 
   find: (event) ->
-    console.log "finding..."
+    console.log "finding."
+    console.log "Found?"
     [data, status, xhr] = event.detail
+    console.log "Found?"
+    console.log xhr
+    console.log "Found?"
     @foundPostTarget.innerHTML = xhr.response
     @titleTarget.value = ""
 

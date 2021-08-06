@@ -26,6 +26,10 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use Slim as a HTML templater
 gem 'slim-rails'
+# Use simple_form
+gem 'simple_form'
+# use rails_ujs
+#gem 'rails-ujs'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
