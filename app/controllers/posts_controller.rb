@@ -19,6 +19,7 @@ class PostsController < ApplicationController
     if @post = Post.find_by(title: params[:title])
       puts "FOUND"
       puts @post
+      render @post
     else
       puts "ERROR! No post!"
     end
