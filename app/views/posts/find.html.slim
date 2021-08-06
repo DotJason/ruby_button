@@ -1,0 +1,10 @@
+h2 Find a post by its title
+
+div data-controller="finder"
+  = form_with html: { data: { type: "html", action: "ajax:success->finder#find ajax:error->finder#error" } }, method: :get do |form|
+    = form.text_field :title, data: { target: "finder.title" }
+    = form.submit "Find post"
+
+  div data-target="finder.foundPost"
+    /-if @post != nil
+      = render @post
