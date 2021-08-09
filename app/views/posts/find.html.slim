@@ -1,5 +1,9 @@
 h2 Find a post by its title
 
+= link_to 'Back', posts_path
+br
+br
+
 div data-controller="finder"
   = form_with url: "/find", html: { data: { remote: true, action: "ajax:success->finder#find" } } do |form|
     = form.text_field :title, data: { target: "finder.title" }

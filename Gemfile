@@ -28,8 +28,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'slim-rails'
 # Use simple_form
 gem 'simple_form'
+# Use Rubocop as the linter
+gem 'rubocop', '0.74'
+# Use devise for auth
+gem 'devise'
 # use rails_ujs
-#gem 'rails-ujs'
+# gem 'rails-ujs'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
