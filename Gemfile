@@ -32,6 +32,8 @@ gem 'simple_form'
 gem 'rubocop', '0.74'
 # Use devise for auth
 gem 'devise'
+# Use cancancan to manage roles and permissions
+gem 'cancancan'
 # use rails_ujs
 # gem 'rails-ujs'
 # Use Redis adapter to run Action Cable in production

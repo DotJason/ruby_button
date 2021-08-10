@@ -3,6 +3,8 @@ h1 Listing posts
 -if user_signed_in?
   p Hello, #{current_user.email}
   = link_to 'Log out', destroy_user_session_path, method: :delete
+  br
+  = link_to 'View roles', '/my_roles'
 -else
   = link_to 'Log in', new_user_session_path
   |  or #{link_to 'Register', new_user_registration_path}
@@ -24,8 +26,9 @@ table
         td = post.title
         td = post.body
         td = link_to 'Show', post
-        td = link_to 'Edit', edit_post_path(post)
-        td = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete
+        -if can? :manage, post
+          td = link_to 'Edit', edit_post_path(post)
+          td = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete
 
 br
 

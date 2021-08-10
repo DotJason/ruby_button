@@ -1,0 +1,8 @@
+h2 View your roles
+
+-if current_user.roles.any?
+  - current_user.roles.each do |role|
+    p
+      =role.name
+-else
+  p Oops! You have no roles! That's embarassing...
